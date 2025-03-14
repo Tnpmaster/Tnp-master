@@ -1,0 +1,129 @@
+<!DOCTYPE html> 
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tnp Master - Offizielle Website</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: url('https://wallpapercave.com/wp/wp8720281.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      border: 3px solid #00f0ff;
+      box-shadow: 0 0 20px #00f0ff;
+    }
+    h1, p {
+      text-shadow: 0 0 10px #00f0ff;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .button {
+      background: transparent;
+      border: 2px solid #00f0ff;
+      color: #ff00ff;
+      font-size: 18px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .button:hover {
+      background: #00f0ff;
+      color: #000;
+      box-shadow: 0 0 15px #00f0ff;
+    }
+    .game-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .content-section {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      border: 2px solid #00f0ff;
+      box-shadow: 0 0 15px #00f0ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Das ist die offizielle Website von Tnp Master!</h1>
+    <p>Auf diesem Kanal findest du alles rund um Brawl Stars, Fortnite und vieles mehr!</p>
+    
+    <div class="button-container">
+      <button class="button" onclick="window.location.href='https://www.youtube.com/channel/DEIN_KANAL_LINK';">Zum Kanal</button>
+      <button class="button" onclick="window.location.href='https://www.youtube.com/channel/DEIN_KANAL_LINK/videos';">Meine Videos</button>
+      <button class="button" onclick="location.reload();">Home</button>
+      <button class="button" onclick="toggleSection('about')">Über mich</button>
+      <button class="button" onclick="toggleSection('mini-games')">Mini-Games</button>
+    </div>
+    
+    <div class="game-buttons">
+      <button class="button" onclick="toggleSection('brawlstars-news')">Brawl Stars</button>
+      <button class="button" onclick="toggleSection('fortnite-news')">Fortnite</button>
+      <button class="button" onclick="toggleSection('minecraft-news')">Minecraft</button>
+    </div>
+    
+    <div id="about" class="content-section">
+      <h2>Über mich</h2>
+      <p>Ich bin Tnp Master und zeige euch Brawl Stars, Fortnite sowie hilfreichen Content! Ich freue mich, mit euch eine Community aufzubauen!</p>
+    </div>
+    
+    <div id="brawlstars-news" class="content-section">
+      <h2>Brawl Stars News</h2>
+      <p><a href="https://brawlstars.com/" target="_blank">Klick hier für aktuelle News!</a></p>
+    </div>
+    
+    <div id="fortnite-news" class="content-section">
+      <h2>Fortnite News</h2>
+      <p><a href="https://www.fortnite.com/news" target="_blank">Klick hier für aktuelle News!</a></p>
+    </div>
+    
+    <div id="minecraft-news" class="content-section">
+      <h2>Minecraft News</h2>
+      <p><a href="https://www.minecraft.net/en-us/article" target="_blank">Klick hier für aktuelle Minecraft News!</a></p>
+    </div>
+    
+    <div id="mini-games" class="content-section">
+      <h2>Mini-Games</h2>
+      <button class="button" onclick="toggleSection('fortnite-game')">Fortnite</button>
+      <button class="button" onclick="toggleSection('brawlstars-game')">Brawl Stars</button>
+      <div id="fortnite-game" class="content-section"><p>Gerade keine am Laufen!</p></div>
+      <div id="brawlstars-game" class="content-section"><p>Gerade keine am Laufen!</p></div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSection(id) {
+      document.querySelectorAll('.content-section').forEach(section => {
+        if (section.id === id) {
+          section.style.display = section.style.display === 'block' ? 'none' : 'block';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
